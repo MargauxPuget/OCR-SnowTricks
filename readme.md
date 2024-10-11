@@ -3,9 +3,10 @@
 - docker
 - docker compose
 - make
-- make-bunble
+
 - twig
 - orm
+- composer require symfony/asset
 
 
 ## Use
