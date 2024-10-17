@@ -13,7 +13,6 @@ class User
     const STATUS_INACTIVE = 'inactive';
     const STATUS_SUSPENDED = 'suspended';
 
-
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]

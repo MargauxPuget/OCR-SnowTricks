@@ -6,12 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class HomeController extends AbstractController
+class UserController extends AbstractController
 {
-    #[Route('/', name: 'home')]
-    public function index(): Response
+
+    #[Route('/inscription', name: 'inscription')]
+    public function inscription(): Response
     {
-        return $this->render('home/home.html.twig',[
+        return $this->render('user/inscription.html.twig',[
             'age' => 30,
             'name' => [
                 'firstname' =>'Margaux',
@@ -20,6 +21,4 @@ class HomeController extends AbstractController
             'tricks'=>['saut', 'coulise', 'rampe']
         ]);
     }
-
-
 }
