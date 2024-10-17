@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
+use App\Repository\UserRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use PhpParser\Node\Stmt\Enum_;
 
+#[ORM\Entity(repositoryClass: UserRepository::class)]
 class User
 {
     const STATUS_ACTIVE = 'active';
@@ -13,6 +14,9 @@ class User
     const STATUS_SUSPENDED = 'suspended';
 
 
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
