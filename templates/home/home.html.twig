@@ -4,15 +4,24 @@
 
 {% block body %}
 
+    {% if message is defined %}
+        <div class="hero-message">{{ message }}</div>
+    {% endif %}
+
     <div class="hero-img">
         <h1>Phrase d'accroche</h1>
         <img src="{{ asset('images/tricks/trick1.png') }}" alt="Bannière"/>
     </div>
-    Je suis {{ name.firstname }} {{ name.lastname }}, et j'ai {{ age }} ans.
 
-    {% for trick in tricks %}
-        <div>{{trick}}</div>
-    {% endfor %}
 
+    {% if name is defined %}
+        Je suis {{ name.firstname }} {{ name.lastname }}, et j'ai {{ age }} ans.
+    {% endif %}
+
+    {% if trick is defined %}
+        {% for trick in tricks %}
+            <div>{{trick}}</div>
+        {% endfor %}
+    {% endif %}
 
 {% endblock %}

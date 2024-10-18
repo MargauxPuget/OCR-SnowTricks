@@ -1,3 +1,14 @@
+.hero-message {
+    position: absolute;
+    border: #DB6A8F solid 3px;
+    background-color: #CA3C66;
+    border: pink solid 3px;
+    z-index: 10;
+    color: white;
+    
+    padding: 10px;
+}
+
 .hero-img {
     position: relative;
 }

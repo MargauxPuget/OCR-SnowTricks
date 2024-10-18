@@ -4,7 +4,34 @@
 
 {% block body %}
 
-    JINSCIRPTION
+    <h2>Inscription</h2>
+    <form action="/user/addUser" method="post" enctype="multipart/form-data">
+            <div>
+            <label for="username">identifiant *</label>
+            <input type="text" name="username" value="MPuget">
+        </div>
+        <div>
+            <label for="firstname">Prénom</label>
+            <input type="text" name="firstname" value="Mar">
+        </div>
+        <div>
+            <label for="lastname">Nom</label>
+            <input type="text" name="lastname" value="Pug">
+        </div>
+        <div>
+            <label for="picture">Image : </label>
+            <input type="file" id="picture" name="picture">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" value="mar.pug@gmail.com">
+        </div>
+        <div>
+            <label for="password">mot de passe</label>
+            <input type="password" name="password" value="devine">
+        </div>
+        <button type="submit">S'incrire</button>
+    </form>
 
 
 {% endblock %}
